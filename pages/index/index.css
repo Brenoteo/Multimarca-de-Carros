@@ -1,0 +1,448 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Início Header */
+.header-content{
+  background-color: #0c1c3a; /* Azul escuro */
+  height: 60px;
+  width: 100%;
+}
+
+.header-menu{
+  align-items: center;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+    
+.header-title h1{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(45deg, #ffd700, #f9a825);
+  cursor: pointer;
+  font: 700 48px/1 'Playfair Display', serif;
+  text-transform: uppercase;
+  transition: transform 0.3s; /* Transição suave */
+}
+
+.header-title h1:hover{
+  transform: translateX(10px); /* Deslocamento para a direita ao passar o mouse */
+  transition: transform 0.3s ease;
+}
+
+
+.header-menu ul{
+  display: flex; /* Alterado para flex */
+  list-style: none;
+}
+
+.header-menu li{
+  margin-right: 20px; /* Adiciona um espaçamento entre os itens */
+}
+
+.header-menu li:last-child{
+  margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+.header-menu a{
+  border: 2px solid #ffd700; /* Aumentei a espessura da borda para torná-la mais proeminente */
+  border-radius: 8px; /* Aumentei o raio da borda para torná-la mais arredondada */
+  color: #ffd700;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.header-menu a:hover{
+  background-color: #ffd700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra sutil */
+  color: #222;
+}
+/* Fim Header */
+hr{
+  border-top-color: #ffd700; /* Cor amarela para combinar com o esquema de cores do site */
+}
+
+.banner{
+  display: flex;
+}
+
+.banner-img{
+  width: 100%;
+}
+
+.banner-img img {
+  height: calc(100vh - 60px);
+  object-fit: cover;
+  width: 100%;
+}
+
+
+/* Início Mensagem */
+.message-container{
+  display: grid;
+  gap: 20px; /* Espaçamento entre os itens */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
+  margin: 0 10%; /* Margem lateral reduzida para melhor uso do espaço */
+  padding: 50px 0;
+}
+
+.message-content{
+  background-color: #f9f9f9; /* Fundo levemente cinza para contraste */
+  border: 1px solid #e0e0e0; /* Borda suave */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 16px;
+  padding: 40px;
+  position: relative; /* Para posição absoluta do ícone */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.message-content:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-content .fa-solid{
+  color: #ffd700; /* Cor amarela para os ícones */
+  font-size: 36px; /* Tamanho dos ícones */
+  left: 50%; /* Centralizar horizontalmente */
+  margin-bottom: 20px; /* Espaçamento entre o ícone e o texto */
+  position: absolute; /* Posição absoluta */
+  top: -30px; /* Deslocamento para cima */
+  transform: translateX(-50%); /* Centralizar horizontalmente */
+  transition: transform 0.3s, color 0.3s; /* Adicionando transições */
+}
+
+.message-content:hover .fa-solid {
+  color: #f9a825;
+  transform: translateX(-50%) rotate(360deg);
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+/* Fim Mensagem */
+
+/* Início Grid de Carros */
+.grid-container{
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 10%;
+}
+
+.grid-item{
+  background-color: #f9f9f9;
+  border: 2px solid #ffd700;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover{
+  transform: translateY(-5px);
+}
+
+.grid-img{
+  border-radius: 10px;
+  cursor: pointer;
+  height: auto;
+  max-height: 250px; /* Limitando a altura máxima das imagens */
+  object-fit: cover; /* Ajustando o tamanho e a proporção da imagem */
+  width: 100%;
+}
+
+.grid-img:nth-child(n+3){
+  max-height: 350px; /* Ajustando a altura máxima das duas últimas imagens */
+}
+/* Fim Grid de Carros */
+
+/* Início Seção de Seguros de Carros */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title{
+  background: linear-gradient(to right, #1e1e1e, #ff8c00); /* Gradiente sutil de preto para laranja */
+  background-clip: text;
+  color: #333; /* Cor preta suave */
+  font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+  font-size: 48px; /* Tamanho da fonte aumentado para destaque */
+  font-weight: 700; /* Peso da fonte */
+  margin-bottom: 40px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+  text-transform: uppercase;
+  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+  -webkit-text-fill-color: transparent; /* Faz com que o texto seja transparente, mostrando o gradiente por trás */
+}
+
+.insurance{
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.insurance-wrapper{
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.insurance-item{
+  flex: 0 1 calc(50% - 20px);
+  margin-bottom: 40px;
+  max-width: calc(50% - 20px);
+  text-align: center;
+}
+
+.insurance-item img{
+  border-radius: 5px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.insurance-text{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.cta-btn {
+  background-color: #ffd700;
+  border: none;
+  border-radius: 5px;
+  color: #222; /* Cor do texto */
+  display: block;
+  font-size: 20px; /* Aumentando o tamanho da fonte para melhor legibilidade */
+  margin: 0 auto;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave para o hover */
+  width: 250px; /* Aumentando a largura do botão */
+}
+
+.cta-btn:hover {
+  background-color: #f9a825; /* Tom mais escuro para o hover, em harmonia com o amarelo do botão */
+  transform: scale(1.05); /* Efeito de aumento sutil ao passar o mouse para transmitir interatividade */
+}
+/* Fim Seção de Seguros de Carro */
+
+/* Início Autopecas */
+.autopecas-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 100px 10%;
+}
+
+.autopecas-container img{
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para efeito de elevação */
+  height: auto;
+  max-width: 50%;
+}
+
+.autopecas-content{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+  padding: 20px; /* Espaçamento interno adicionado */
+}
+
+.autopecas-content h1{
+  background: linear-gradient(to right, #1e1e1e, #ff8c00); /* Gradiente sutil de preto para laranja */
+  color: #fff; /* Cor do texto alterada para branco */
+  font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+  font-size: 36px; /* Aumentando o tamanho da fonte para maior destaque */
+  font-weight: 700; /* Adicionando negrito para mais impacto */
+  margin: 20px 0 10px; /* Ajustando o espaçamento para melhor alinhamento */
+  text-align: center; /* Centralizando o texto */
+  text-transform: uppercase;
+  -webkit-background-clip: text; /* Aplica o gradiente apenas ao texto */
+  -webkit-text-fill-color: transparent; /* Faz com que o texto seja transparente, mostrando o gradiente por trás */
+}
+
+.autopecas-content p{
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0; /* Reduzido o espaçamento superior e inferior */
+}
+
+.btn-descubra-agora{
+  background-color: #ffd700; /* Amarelo suave para combinar com o esquema de cores do site */
+  border: none;
+  border-radius: 8px; /* Bordas arredondadas para um visual mais suave */
+  color: #222; /* Cor do texto */
+  cursor: pointer;
+  font-size: 18px; /* Aumentar um pouco o tamanho da fonte */
+  letter-spacing: 1px; /* Espaçamento entre as letras para melhor legibilidade */
+  padding: 15px 40px;
+  text-transform: uppercase; /* Texto em maiúsculas para uma aparência mais sofisticada */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave para o hover */
+  width: 100%;
+}
+
+.btn-descubra-agora:hover{
+  background-color: #f9a825; /* Tom mais escuro para o hover, em harmonia com o amarelo do botão */
+  transform: scale(1.05); /* Efeito de aumento sutil ao passar o mouse para transmitir interatividade */
+}
+/* Fim Autopecas */
+
+/* Início Rodapé */
+footer{
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+footer a{
+  color: #f9a825;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer .footer-section{
+  margin-bottom: 20px;
+}
+
+footer .footer-section h4{
+  color: #f9a825;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+footer .social-media a{
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer .social-media a .fa-brands{
+  height: 24px;
+  width: 24px;
+}
+
+footer .footer-bottom{
+  border-top: 1px solid #444;
+  color: #aaa;
+  font-size: 14px;
+  padding-top: 20px;
+}
+/* Fim Rodapé */
+
+
+
+
+
+/* Acessibilidade */
+a:focus, button:focus{
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+
+
+
+
+/* Adicionando estilos responsivos */
+@media (max-width: 940px){
+  .autopecas-container {
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 5%;
+  }
+
+  .autopecas-container img{
+    max-width: 80%;
+  }
+
+  .autopecas-content{
+    margin: 20px 0;
+  }
+
+  .cta-btn{
+    width: 80%;
+  }
+
+  .grid-container{
+    margin: 0 5%;
+  }
+
+  .header-menu{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header-menu li{
+    margin: 10px 0;
+  }
+
+  .insurance-item{
+    margin: 20px 0;
+    max-width: 80%;
+  }
+
+  .insurance-wrapper{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .message-container{
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 768px){
+  .autopecas-container img{
+    max-width: 90%;
+  }
+
+  .autopecas-content h1{
+    font-size: 24px;
+  }
+
+  .autopecas-content p{
+    font-size: 14px;
+  }
+
+  .cta-btn{
+    width: 90%;
+  }
+
+  .header-menu a{
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .header-title{
+    font-size: 24px;
+  }
+
+  .insurance-item{
+    max-width: 90%;
+  }
+}
