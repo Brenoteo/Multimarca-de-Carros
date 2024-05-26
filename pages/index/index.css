@@ -9,172 +9,262 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
-/* Início Header */
-.header-content{
-  background-color: #0c1c3a; /* Azul escuro */
-  height: 60px;
+/* Início Cabeçalho */
+.header {
+  background: linear-gradient(135deg, #0c1c3a, #092b51); /* Gradiente azul escuro */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra suave aumentada */
+  color: #fff; /* Cor do texto */
+  padding: 30px 0; /* Espaçamento interno */
+  position: fixed; /* Fixa o cabeçalho no topo */
+  width: 100%; /* Ocupa toda a largura da tela */
+  z-index: 1000; /* Coloca o cabeçalho sobre outros elementos */
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1400px; /* Aumenta a largura máxima */
+  padding: 0 30px; /* Espaçamento interno */
+}
+
+.header-logo img {
+  height: 60px; /* Altura do logo */
+  transition: transform 0.3s; /* Transição suave para o logo */
+}
+
+.header-logo img:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do logo no hover */
+}
+
+.header-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav ul li {
+  margin-left: 40px; /* Espaçamento entre os itens do menu */
+}
+
+.header-nav ul li:first-child {
+  margin-left: 0; /* Remove a margem do primeiro item */
+}
+
+.header-nav ul li a {
+  color: #fff; /* Cor do texto do menu */
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s; /* Transição suave da cor do texto */
+}
+
+.header-nav ul li a:before {
+  background-color: #ffd700; /* Cor do underline */
+  bottom: -5px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
   width: 100%;
 }
 
-.header-menu{
-  align-items: center;
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
-  margin: 0 10%;
+.header-nav ul li a:hover:before {
+  transform: scaleX(1); /* Efeito de underline ao passar o mouse */
 }
-    
-.header-title h1{
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(45deg, #ffd700, #f9a825);
-  cursor: pointer;
-  font: 700 48px/1 'Playfair Display', serif;
+
+.header-title {
+  border-right: 2px solid rgba(255, 255, 255, 0.5); /* Linha vertical separadora com transparência */
+  font-size: 24px; /* Tamanho da fonte do título */
+  font-weight: bold;
+  letter-spacing: 2px; /* Espaçamento entre as letras */
+  margin-right: 30px; /* Espaçamento à direita */
+  padding-right: 30px; /* Espaçamento interno à direita */
   text-transform: uppercase;
-  transition: transform 0.3s; /* Transição suave */
 }
+/* Fim Cabeçalho */
 
-.header-title h1:hover{
-  transform: translateX(10px); /* Deslocamento para a direita ao passar o mouse */
-  transition: transform 0.3s ease;
-}
-
-
-.header-menu ul{
-  display: flex; /* Alterado para flex */
-  list-style: none;
-}
-
-.header-menu li{
-  margin-right: 20px; /* Adiciona um espaçamento entre os itens */
-}
-
-.header-menu li:last-child{
-  margin-right: 0; /* Remove o espaçamento do último item */
-}
-
-.header-menu a{
-  border: 2px solid #ffd700; /* Aumentei a espessura da borda para torná-la mais proeminente */
-  border-radius: 8px; /* Aumentei o raio da borda para torná-la mais arredondada */
-  color: #ffd700;
-  cursor: pointer;
-  letter-spacing: 1.2px;
-  padding: 15px 20px;
-  text-decoration: none;
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-}
-
-.header-menu a:hover{
-  background-color: #ffd700;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionando uma sombra sutil */
-  color: #222;
-}
-/* Fim Header */
 hr{
-  border-top-color: #ffd700; /* Cor amarela para combinar com o esquema de cores do site */
+  border-top-color: #ffd700;
 }
 
+/* Início Banner */
 .banner{
-  display: flex;
+  position: relative;
 }
 
 .banner-img{
-  width: 100%;
+  position: relative;
 }
 
-.banner-img img {
-  height: calc(100vh - 60px);
+.banner-img img{
+  height: calc(100vh - 30px);
   object-fit: cover;
   width: 100%;
 }
 
+.banner-overlay{
+  color: #333; /* Cor do texto ajustada para garantir legibilidade */
+  left: 50%;
+  margin-bottom: 30px;
+  margin-bottom: 20px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-overlay .btn{
+  background-color: #ffd700;
+  border-radius: 5px;
+  color: #222;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.banner-overlay .btn:hover{
+  background-color: #f9a825;
+}
+
+.banner-overlay h2{
+  color: #fff; /* Cor do título */
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner-overlay p{
+  color: #fff; /* Cor do texto */
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+/* Fim Banner */
 
 /* Início Mensagem */
 .message-container{
   display: grid;
-  gap: 20px; /* Espaçamento entre os itens */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout responsivo */
-  margin: 0 10%; /* Margem lateral reduzida para melhor uso do espaço */
-  padding: 50px 0;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 10%;
+  max-width: 1200px;
+  padding: 80px 0;
 }
 
 .message-content{
-  background-color: #f9f9f9; /* Fundo levemente cinza para contraste */
-  border: 1px solid #e0e0e0; /* Borda suave */
-  border-radius: 8px; /* Bordas arredondadas */
-  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 40px;
-  position: relative; /* Para posição absoluta do ícone */
+  position: relative;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .message-content:hover{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.message-content .fa-solid{
-  color: #ffd700; /* Cor amarela para os ícones */
-  font-size: 36px; /* Tamanho dos ícones */
-  left: 50%; /* Centralizar horizontalmente */
-  margin-bottom: 20px; /* Espaçamento entre o ícone e o texto */
-  position: absolute; /* Posição absoluta */
-  top: -30px; /* Deslocamento para cima */
-  transform: translateX(-50%); /* Centralizar horizontalmente */
-  transition: transform 0.3s, color 0.3s; /* Adicionando transições */
-}
-
-.message-content:hover .fa-solid {
-  color: #f9a825;
-  transform: translateX(-50%) rotate(360deg);
-  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-}
-/* Fim Mensagem */
-
-/* Início Grid de Carros */
-.grid-container{
-  display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0 10%;
-}
-
-.grid-item{
-  background-color: #f9f9f9;
-  border: 2px solid #ffd700;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.grid-item:hover{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
 }
 
-.grid-img{
+.message-content .fa-solid{
+  color: #ffd700;
+  font-size: 30px; 
+  margin-bottom: 20px;
+}
+
+.message-content h2{
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.message-content p{
+  color: #666;
+  line-height: 1.6;
+}
+/* Fim Mensagem */
+
+/* Início Lista de Carros */
+.car-section-title{
+  background: linear-gradient(to right, #1e1e1e, #ff8c00);
+  background-clip: text;
+  color: transparent;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.car-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+
+.car-item{
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  height: auto;
-  max-height: 250px; /* Limitando a altura máxima das imagens */
-  object-fit: cover; /* Ajustando o tamanho e a proporção da imagem */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+  width: calc(50% - 15px);
+}
+
+.car-item:hover{
+  transform: translateY(-5px);
+}
+
+.car-item img{
+  border-radius: 10px 10px 0 0;
   width: 100%;
 }
 
-.grid-img:nth-child(n+3){
-  max-height: 350px; /* Ajustando a altura máxima das duas últimas imagens */
+.car-item h3{
+  color: #333;
+  font-size: 24px;
+  margin: 20px 0 10px;
+  text-align: center;
 }
-/* Fim Grid de Carros */
+
+.car-item p{
+  color: #666;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.car-item a{
+  background-color: #ffd700;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  color: #222;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.car-item a:hover{
+  background-color: #f9a825;
+}
+/* Fim Lista de Carros */
 
 /* Início Seção de Seguros de Carros */
-.container{
+.insurance-container{
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 10%;
   padding: 0 15px;
 }
 
@@ -215,7 +305,6 @@ hr{
 
 .insurance-item img{
   border-radius: 5px;
-  margin-bottom: 20px;
   max-width: 100%;
 }
 
@@ -224,13 +313,15 @@ hr{
   line-height: 1.5;
 }
 
-.cta-btn {
+.btn-saiba-mais{
   background-color: #ffd700;
   border: none;
   border-radius: 5px;
   color: #222; /* Cor do texto */
+  cursor: pointer;
   display: block;
   font-size: 20px; /* Aumentando o tamanho da fonte para melhor legibilidade */
+  letter-spacing: 1px; /* Espaçamento entre as letras para melhor legibilidade */
   margin: 0 auto;
   padding: 15px 20px;
   text-align: center;
@@ -240,7 +331,7 @@ hr{
   width: 250px; /* Aumentando a largura do botão */
 }
 
-.cta-btn:hover {
+.btn-saiba-mais:hover{
   background-color: #f9a825; /* Tom mais escuro para o hover, em harmonia com o amarelo do botão */
   transform: scale(1.05); /* Efeito de aumento sutil ao passar o mouse para transmitir interatividade */
 }
@@ -353,16 +444,6 @@ footer .footer-bottom{
   padding-top: 20px;
 }
 /* Fim Rodapé */
-
-
-
-
-
-/* Acessibilidade */
-a:focus, button:focus{
-  outline: 2px solid #ffd700;
-  outline-offset: 2px;
-}
 
 
 
