@@ -483,41 +483,48 @@ footer .footer-bottom{
 
 
 /* Adicionando estilos responsivos */
+@media (max-width: 1100px){
+  .message-container{
+    grid-template-columns: auto;
+  }
+}
+
 @media (max-width: 940px){
+  .car-section-title{
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  }
+
+  .section-title{
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
+  }
+
   .autopecas-container {
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     margin: 50px 5%;
   }
 
   .autopecas-container img{
-    max-width: 80%;
+    max-width: 100%;
   }
 
-  .autopecas-content{
-    margin: 20px 0;
-  }
-
-  .cta-btn{
-    width: 80%;
-  }
-
-  .grid-container{
-    margin: 0 5%;
-  }
-
-  .header-menu{
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .header-menu li{
-    margin: 10px 0;
+  .autopecas-content h1{
+    font-size: clamp(1rem, 2vw + 1rem, 2rem);
   }
 
   .insurance-item{
-    margin: 20px 0;
-    max-width: 80%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .car-list{
+    flex-direction: column;
+  }
+
+  .car-item{
+    width: 100%;
   }
 
   .insurance-wrapper{
@@ -525,38 +532,12 @@ footer .footer-bottom{
     flex-direction: column;
   }
 
-  .message-container{
-    margin: 0 5%;
-  }
-}
-
-@media (max-width: 768px){
-  .autopecas-container img{
-    max-width: 90%;
-  }
-
-  .autopecas-content h1{
-    font-size: 24px;
-  }
-
-  .autopecas-content p{
-    font-size: 14px;
-  }
-
-  .cta-btn{
+  .autopecas-container{
     width: 90%;
+    margin: 0;
   }
 
-  .header-menu a{
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .header-title{
-    font-size: 24px;
-  }
-
-  .insurance-item{
-    max-width: 90%;
+  .autopecas-container img{
+    display: none;
   }
 }
