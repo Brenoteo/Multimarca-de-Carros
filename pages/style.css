@@ -9,6 +9,13 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+:root {
+  --gradient-color: linear-gradient(to right, #1e1e1e, #ff8c00);
+  --text-clip: text;
+  --text-color: #ff8c00;
+  --text-fill: transparent;
+}
+
 /* Início Cabeçalho */
 .header{
   background: linear-gradient(135deg, #0c1c3a, #092b51);
@@ -154,31 +161,6 @@ body{
   width: 100%;
 }
 
-.banner-overlay{
-  color: #333;
-  left: 50%;
-  margin-bottom: 30px;
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.banner-overlay .btn{
-  background-color: #ffd700;
-  border-radius: 5px;
-  color: #222;
-  display: inline-block;
-  font-weight: bold;
-  padding: 12px 24px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.banner-overlay .btn:hover{
-  background-color: #f9a825;
-}
-
 .banner-overlay h2{
   color: #fff;
   font-size: 36px;
@@ -189,6 +171,30 @@ body{
   color: #fff;
   font-size: 18px;
   margin-bottom: 30px;
+}
+
+.banner-overlay{
+  left: 50%;
+  margin-bottom: 30px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-overlay .btn{
+  background-color: #ffd700;
+  border-radius: 10px;
+  color: #222;
+  display: inline-block;
+  font-weight: bold;
+  padding: 12px 24px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.banner-overlay .btn:hover{
+  background-color: #f9a825;
 }
 /* Fim Banner */
 
@@ -275,16 +281,16 @@ body{
 
 /* Início Lista de Carros */
 .car-section-title{
-  background: linear-gradient(to right, #1e1e1e, #ff8c00);
-  background-clip: text;
-  color: transparent;
+  background: var(--gradient-color);
+  background-clip: var(--text-clip);
+  color: var(--text-color);
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 40px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: var(--text-clip);
+  -webkit-text-fill-color: var(--text-fill);
 }
 
 .car-list{
@@ -361,8 +367,9 @@ body{
 }
 
 .section-title{
-  background: linear-gradient(to right, #1e1e1e, #ff8c00);
-  background-clip: text;
+  background: var(--gradient-color);
+  background-clip: var(--text-clip);
+  color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -370,8 +377,8 @@ body{
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: var(--text-clip);
+  -webkit-text-fill-color: var(--text-fill);
 }
 
 .insurance-wrapper{
@@ -448,17 +455,17 @@ body{
 }
 
 .autopecas-content h1{
-  background: linear-gradient(to right, #1e1e1e, #ff8c00);
-  background-clip: text;
-  color: #fff;
+  background: var(--gradient-color);
+  background-clip: var(--text-clip);
+  color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 700;
   margin: 20px 0 10px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: var(--text-clip);
+  -webkit-text-fill-color: var(--text-fill);
 }
 
 .autopecas-content p{
@@ -634,6 +641,15 @@ footer .footer-bottom{
   .autopecas-content{
     margin: 0 10%;
   }
+
+  /* Página Serviços*/
+  .main-service .section-service h1{
+    font-size: 35px;
+  }
+
+  .main-service .section-service p{
+    font-size: 20px;
+  }
 }
 
 
@@ -646,7 +662,7 @@ footer .footer-bottom{
   color: #333;
   display: flex;
   flex-direction: column;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 40px 0;
   width: 100%;
 }
@@ -657,9 +673,14 @@ footer .footer-bottom{
 }
 
 .section-service h1{
+  background: var(--gradient-color);
+  background-clip: var(--text-clip);
+  color: var(--text-color);
   font-size: clamp(1rem, 2vw + 2rem, 2.7rem);
   margin-bottom: 20px;
   text-transform: uppercase;
+  -webkit-background-clip: var(--text-clip);
+  -webkit-text-fill-color: var(--text-fill);
 }
 
 .section-service p{
@@ -691,19 +712,98 @@ footer .footer-bottom{
 .service-images-content img{
   border-radius: 10px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  filter: blur(0.5px) brightness(0.8) contrast(1.2);
-  cursor: pointer;
   max-width: 300px;
   transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
   width: 100%;
 }
 
-.service-images-content img:hover{
-  filter: none;
-  transform: translateX(-25px) scale(1.10);
+.service-images-content img:nth-last-child(2){
+  position: relative;
+  top: 15px;
 }
 
-.service-images-content img:hover:nth-child(2){
-  filter: none;
-  transform: translateX(25px) scale(1.10);
+.maintenance-container{
+  font-family: 'Roboto', sans-serif;
+  padding: 100px 10%;
+  text-align: center;
+  width: 100%;
+}
+
+.maintenance-container h2{
+  background: var(--gradient-color);
+  background-clip: var(--text-clip);
+  color: var(--text-color);
+  font-size: 3rem;
+  padding: 10px;
+  -webkit-background-clip: var(--text-clip);
+  -webkit-text-fill-color: var(--text-fill);
+}
+
+.maintenance-container p{
+  font-size: 20px;
+  line-height: 1.6;
+  padding: 10px 0;
+}
+
+.maintenance-container .services-offered{
+  border-bottom: 2px solid #0c1c3a;
+  margin: 20px 0 5px 0;
+}
+
+.maintenance-container ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.maintenance-container li{
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.maintenance-container li:hover{
+  background-color: #e0e0e0;
+}
+
+.maintenance-container a{
+  color: #000000;
+  text-decoration: none;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-services-offered{
+  animation: heartbeat 2s infinite;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 10px;
+  color: #222;
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 50px auto 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s ease;
+  width: 80%;
+}
+
+.btn-services-offered:hover{
+  background-color: #f9a825;
 }
