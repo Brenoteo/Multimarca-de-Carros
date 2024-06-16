@@ -8,6 +8,8 @@
   <!-- Roboto Font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/pages/style.css">
+  <link rel="stylesheet" href="/pages/responsiveness.css">
+
   <script defer src="/pages/index.js"></script>
   <title>Serviços Automotivos | EMPERION™</title>
 <body>
@@ -57,6 +59,7 @@
     </div>
   </main>
 
+  <!-- Início Manutenção Preventiva -->
   <section class="maintenance-container">
     <h2>Manutenção Preventiva</h2>
     <p>
@@ -67,7 +70,7 @@
 
     <p class="services-offered"><strong>Completo para o seu Veículo</strong></p>
 
-    <ul>
+    <ul class="services-ul">
       <li>Correias do motor</li>
       <li>Óleo</li>
       <li>Lâmpadas</li>
@@ -90,56 +93,91 @@
       <li>Freios</li>
     </ul>
 
-    <button class="btn-services-offered">
-      <a href="#">
-        Pronto para dar o próximo passo? Entre em contato agora para agendar sua manutenção.
-      </a>
-    </button> 
+    <div class="services-copywriting">
+      <h3>Pronto para dar o próximo passo?</h3>
+      <button class="btn-services-offered">
+        <a href="#">
+          Entre em contato agora!
+        </a>
+      </button> 
+    </div>
   </section>
-
-    <!-- Início rodapé -->
-    <footer>
-      <div class="footer-section">
-          <h4>Sobre Nós</h4>
-          <p>A Emperion é uma loja multimarcas de carros comprometida em oferecer veículos de alta qualidade, com segurança e durabilidade. Nossa missão é proporcionar a melhor experiência de compra para nossos clientes, com atendimento de excelência e confiança.</p>
+  <!-- Fim Manutenção Preventiva -->
+  
+  <aside class="additional-services-container">
+    <div class="wifi-services-content">
+      <h1>Serviço de Brinde</h1>
+      <h2>WiFi Automotivo: Conexão Sem Limites!</h2>
+      <p>Assinando nosso Plano, Transforme cada viagem em uma experiência conectada. 
+        Imagine acessar música, mapas e conteúdos online sem consumir seu plano de dados. 
+        Nossa solução de WiFi automotivo oferece:</p>
+    </div>
+        
+      <div class="wifi-services-list">
+        <ul>
+          <li>
+            <i class="fa-solid fa-wifi"></i>
+            <strong>Conexão contínua</strong>Navegue sem interrupções em áreas urbanas e rurais</li>
+            <br>
+          <li>
+            <i class="fa-solid fa-wrench"></i>
+            <strong>Facilidade de instalação</strong>Sem complicações, rapidamente instalado por nossos especialistas</li>
+            <br>
+          <li>
+            <i class="fa-solid fa-fingerprint"></i>
+            <strong>Segurança</strong>Rede privada e criptografada, mantendo seus dados protegidos</li>
+            <br>
+          <li>
+            <i class="fa-solid fa-chart-line"></i>
+            <strong>Economia</strong>Mais barato que usar o 4G do celular para todos os passageiros</li>
+        </ul>
+          <img src="/assets/img/wifiForCar.jpg" alt="">
       </div>
-
-      <div class="footer-section">
-          <h4>Contato</h4>
-          <p>CNPJ: 12.345.678/0001-99</p>
-          <p>Endereço: Avenida Exemplo, 456, Bairro, Cidade - UF, CEP: 12345-678</p>
+  </aside>
+  
+  <!-- Início rodapé -->
+  <footer>
+    <div class="footer-section">
+      <h4>Sobre Nós</h4>
+      <p>A Emperion é uma loja multimarcas de carros comprometida em oferecer veículos de alta qualidade, com segurança e durabilidade. Nossa missão é proporcionar a melhor experiência de compra para nossos clientes, com atendimento de excelência e confiança.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Contato</h4>
+      <p>CNPJ: 12.345.678/0001-99</p>
+      <p>Endereço: Avenida Exemplo, 456, Bairro, Cidade - UF, CEP: 12345-678</p>
           <p>Telefone: (11) 1234-5678 | Email: contato@emperion.com.br</p>
-      </div>
-
+    </div>
+        
       <div class="footer-section">
-          <h4>Links Úteis</h4>
-          <p>
-              <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> | 
-              <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> | 
-              <a href="politica-de-cookies.html" target="_blank">Política de Cookies</a>
-          </p>
+        <h4>Links Úteis</h4>
+        <p>
+          <a href="termos-de-uso.html" target="_blank">Termos de Uso</a> | 
+          <a href="politica-de-privacidade.html" target="_blank">Política de Privacidade</a> | 
+          <a href="politica-de-cookies.html" target="_blank">Política de Cookies</a>
+        </p>
       </div>
-
-      <div class="footer-section social-media">
+        
+        <div class="footer-section social-media">
           <h4>Siga-nos</h4>
           <a href="https://facebook.com/" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-facebook"></i>
           </a>
           <a href="https://twitter.com/" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-twitter"></i>
           </a>
           <a href="https://instagram.com/c4teodoro/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-instagram"></i>
           </a>
           <a href="https://www.linkedin.com/in/brenoteo/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin"></i>
           </a>
-      </div>
-
-      <div class="footer-bottom">
+        </div>
+        
+        <div class="footer-bottom">
           <p>&copy; 2024 Emperion. Todos os direitos reservados.</p>
           <p>Desenvolvido por <a href="https://www.linkedin.com/in/brenoteo/" target="_blank">Breno Teodoro</a></p>
-      </div>
+        </div>
   </footer>
   <!-- Fim Rodapé  -->
   
