@@ -748,7 +748,7 @@ footer .footer-bottom{
 }
 
 .additional-services-container img{
-  border-radius: 50%;
+  border-radius: 10px;
   padding: 5%;
   width: 50%;
 }
