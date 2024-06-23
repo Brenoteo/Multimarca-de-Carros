@@ -31,7 +31,7 @@ var lastScrollTop = 0;
 window.addEventListener("scroll", function() {
     var currentScroll = window.scrollY || document.documentElement.scrollTop;
     if (currentScroll > lastScrollTop) {
-        document.querySelector(".header").style.top = "-100px"; /* Ou a altura do seu cabeçalho */
+        document.querySelector(".header").style.top = "-100px";
     } else {
         document.querySelector(".header").style.top = "0";
     }

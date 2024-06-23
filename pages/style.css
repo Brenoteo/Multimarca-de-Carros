@@ -159,6 +159,7 @@ body{
   height: calc(100vh - 30px);
   object-fit: cover;
   width: 100%;
+  filter: brightness(30%);
 }
 
 .banner-overlay h2{
@@ -698,57 +699,4 @@ footer .footer-bottom{
 
 .btn-services-offered:hover{
   background-color: #f9a825;
-}
-
-.additional-services-container{
-  padding: 0 10%;
-  width: 100%;
-}
-
-.wifi-services-content{
-  text-align: center;
-}
-
-.wifi-services-content h1{
-  background: var(--gradient-color);
-  background-clip: var(--text-clip);
-  color: var(--text-color);
-  margin: 65px 0 20px 0;
-  font-size: 50px;
-  text-transform: uppercase;
-  -webkit-background-clip: var(--text-clip);
-  -webkit-text-fill-color: var(--text-fill);
-}
-
-.wifi-services-content h2{
-  border-bottom: 1px solid #ccc;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-.wifi-services-content p{
-  letter-spacing: 0.03rem;
-  line-height: 1.6rem;
-  padding: 20px 0;
-}
-
-.wifi-services-list{
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.wifi-services-list ul li{
-  list-style: none;
-}
-
-.wifi-services-list ul li strong{
-  padding: 0 3%;
-}
-
-.additional-services-container img{
-  border-radius: 10px;
-  padding: 5%;
-  width: 50%;
 }
