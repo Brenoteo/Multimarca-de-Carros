@@ -130,4 +130,14 @@
     max-width: 60%;
     width: 100%;
   }
+
+  .autoPartItem {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .autoPartItem {
+    width: 90%;
+  }
 }
