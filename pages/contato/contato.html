@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="/pages/style.css">
   <link rel="stylesheet" href="/pages/responsiveness.css">
   <script defer src="/pages/index.js"></script>
-  <title>Peças Certificadas | EMPERION™</title>
+  <title>Serviços Automotivos | EMPERION™</title>
 </head>
 <body>
-  
+
   <header class="header">
     <div class="header-container">
 
@@ -44,68 +44,34 @@
     </div>
   </header>
 
-  <div class="banner">
-    <div class="banner-img">
-      <img src="/assets/img/repairingCar.jpg" alt="">
-      <div class="banner-overlay">
-        <h2>Peças Originais para Seu Carro</h2>
-        <p>Explore nossa seleção de peças novas e melhore o desempenho do seu veículo.</p>
-        <a href="" class="btn-saiba-mais">Compre Já!</a>
-      </div>
-    </div>
-  </div>  
+  <div class="contact-container">
+    <h1>Vamos Entrar em Contato com Você!</h1>
+    <p>Preencha o formulário abaixo e nossa equipe retornará o mais breve possível.</p>
+    
+    <form action="mailto:contato@multicarros.com" method="post" enctype="text/plain">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+    
+        <label for="interesse">Você Está Interessado em:</label>
+        <select id="interesse" name="interesse" required>
+            <option value="manutencao">Manutenção Preventiva</option>
+            <option value="compra">Compra de Veículo</option>
+        </select>
 
-      <section class="autoPartsSales">
-        <div class="autoPartsSalesContent">
-          <h2>Nossas Peças Certificadas</h2>
-          <p>Confira nossa seleção de peças originais e certificadas para seu veículo.</p>
-      
-          <div class="autoPartsList">
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/macacoHidraulico.jpg" alt="Part 1">
-              <h3>Macaco Hidráulico</h3>
-              <p>Elevação rápida e segura para seu veículo</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
-      
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/filtroDeAr.jpg" alt="Part 2">
-              <h3>Filtro de Ar</h3>
-              <p>Mantenha o motor limpo e eficiente</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
+        <label for="nome">Mensagem:</label>
+        <input type="text" id="mensagem" name="mensagem" required>
+    
+        <button type="submit">Enviar</button>
+    </form>  
+  </div>
 
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/oleoDeMotor.jpg" alt="Part 2">
-              <h3>Óleo automotivo</h3>
-              <p>Proteção e performance para seu motor</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
-
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/parafusoDeRoda.jpg" alt="Part 2">
-              <h3>Parafuso</h3>
-              <p>Resistência e durabilidade garantidas</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
-
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/rolamentoParaRoda.jpg" alt="Part 2">
-              <h3>Rolamento</h3>
-              <p>Desempenho suave e confiável</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
-
-            <div class="autoPartItem">
-              <img src="/assets/autopecas/velaDeIgnicao.jpg" alt="Part 2">
-              <h3>Vela de Ignição</h3>
-              <p>Partida eficiente e duradoura</p>
-              <a href="#" class="btn-saiba-mais">Compre Já!</a>
-            </div>
-      
-          </div>
-        </div>
-      </section>
+  <iframe class="map-contact" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.7615708435437!2d-43.94545272555921!3d-19.976526939757466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6980296c92bed%3A0xef5d078d1948d46d!2sRua%20Maestro%20Arthur%20Bosmans%2C%2023%20-%20Belvedere%2C%20Belo%20Horizonte%20-%20MG%2C%2030320-680!5e0!3m2!1sen!2sbr!4v1719540811920!5m2!1sen!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   <!-- Início rodapé -->
   <footer>
@@ -152,3 +118,6 @@
     </div>
 </footer>
 <!-- Fim Rodapé  -->
+
+</body>
+</html>
